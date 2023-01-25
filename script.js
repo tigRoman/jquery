@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'jquery'
+import { tns } from "./node_modules/tiny-slider/src/tiny-slider";
 
 //check to ready DOM structure
 
@@ -21,6 +22,13 @@ $(document).ready(function() {
         }, 2000)
 
     });
+
+    tns({
+        container: '.wrapper',
+        items: 1,
+        slideBy: 'page',
+        autoplay: true
+      });
 });
 
 console.log(btn);
